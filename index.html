@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de produtos</title>
+    <style>
+        :root{
+            --cor1: #fffcf2ff;
+            --cor2: #ccc5b9ff;
+            --cor3: #403d39ff;
+            --cor4: #252422ff;
+            --cor5: #eb5e28ff;
+        }
+
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            background-color: var(--cor2);
+            color: var(--cor5);
+        }
+
+        #catalogo{
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            background-color: var(--cor1);
+            color: var(--cor2);
+            padding: 2rem;
+            border: 1px solid var(--cor5);
+            border-radius: 5px;
+            flex-wrap: wrap;
+        }
+        .card{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            border: 2px solid var(--cor5);
+            border-radius: 5px;
+            height: 250px;
+            width: 250px;
+            color: var(--cor4);
+        }
+
+        h3{
+            color: var(--cor5);
+            font-size: 3rem;
+            letter-spacing: 0.2rem;
+        }
+
+        img{
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+        <h3>Catálogo de produtos:</h3>
+        <form>
+            <label>Pesquise por categoria: </label>
+            <input type="search" id="pesquisa">
+        </form>
+        <div id="catalogo">
+            <!--<div class="card">
+                <h4>Nome</h4>
+                <p><b>Memória</b></p>
+                <p><b>Memória RAM</b></p>
+                <p><b>preço</b></p>-->
+            </div>
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
