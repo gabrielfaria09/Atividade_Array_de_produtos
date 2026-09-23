@@ -25,19 +25,27 @@ const produtos = [
     ['Notebook Acer Swift', '512 GB SSD, 16 GB RAM', 'R$ 4800', 'assets/Imagem24.avif']
 ];
 
-const catalogo = document.getElementById('catalogo');
-const pesquisa = document.getElementById('pesquisa');
+const catalogo = document.getElementById('catalogo'); //Seção que comporta os cards
+const pesquisa = document.getElementById('pesquisa'); //Barra de pesquisa
+
+//Função de filtragem acionada ao digitar no campo
 
 function filtrar(){
-    const valor = pesquisa.value.toLowerCase();
+    const valor = pesquisa.value.toLowerCase(); //Valor digitado na barra de pesquisa
 
     catalogo.innerHTML = "";
+
+    //Manipulação do Array, primeiro retornando os elementos que passam pela filtragem,
+    //depois, criando um card para cada um, e armazenando os valores das variáveis em cada card.
+    //*Quando nada é digitado, todos os elementos apararecem.
 
     produtos.filter(([nome, descricao, preco, imagem]) => 
     nome.toLowerCase().includes(valor) || descricao.toLowerCase().includes(valor))
     .forEach(([nome, descricao, preco, imagem]) => {
-        const divisao = document.createElement('div');
+        const divisao = document.createElement('div'); //Card de cada produto
         divisao.className = "card";
+
+        //Manipulação do DOM com as variáveis, por innerHTML.
 
         divisao.innerHTML = `<img src="${imagem}" alt="${nome}">
                             <h4>${nome}</h4>
@@ -50,4 +58,4 @@ function filtrar(){
 
 pesquisa.addEventListener('input', filtrar);
 
-filtrar();
+filtrar(); //Função executada sem input, mostrando todos os elementos inicialmente.

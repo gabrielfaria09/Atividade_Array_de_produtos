@@ -5,7 +5,7 @@ Um projeto web simples e dinâmico que apresenta uma lista de produtos de tecnol
 ## 📋 Funcionalidades
 
 - **Exibição Dinâmica:** Os produtos são renderizados dinamicamente na tela a partir de um array de dados no JavaScript.
-- **Filtro de Busca em Tempo Real:** Uma barra de pesquisa permite filtrar os produtos mostrados no catálogo pelo **nome**, capacidade de **armazenamento** ou quantidade de **memória RAM**. O filtro é aplicado instantaneamente enquanto o usuário digita.
+- **Filtro de Busca em Tempo Real:** Uma barra de pesquisa permite filtrar os produtos mostrados no catálogo pelo **nome** e pela descrição. O filtro é aplicado instantaneamente enquanto o usuário digita.
 - **Design Simples e Responsivo:** O layout utiliza Flexbox e variáveis CSS para manter um padrão visual limpo e organizado.
 
 ## 💻 Tecnologias Utilizadas
