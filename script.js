@@ -39,9 +39,22 @@ function filtrar(){
     //depois, criando um card para cada um, e armazenando os valores das variáveis em cada card.
     //*Quando nada é digitado, todos os elementos apararecem.
 
-    produtos.filter(([nome, descricao, preco, imagem]) => 
-    nome.toLowerCase().includes(valor) || descricao.toLowerCase().includes(valor))
-    .forEach(([nome, descricao, preco, imagem]) => {
+    const filtrando = produtos.filter(([nome, descricao, preco, imagem]) => 
+    nome.toLowerCase().includes(valor) || descricao.toLowerCase().includes(valor));
+
+    //Se não houver correspondência na pesquisa, aparecerá mensagem de produto não
+    //encontrado.
+
+    if(filtrando.length == 0){
+        const divisao = document.createElement('div'); //Card de mensagem de erro
+        divisao.className = "card";
+
+        divisao.innerHTML = `Produto não encontrado.`
+
+        catalogo.append(divisao);
+    }
+
+    filtrando.forEach(([nome, descricao, preco, imagem]) => {
         const divisao = document.createElement('div'); //Card de cada produto
         divisao.className = "card";
 
