@@ -21,9 +21,8 @@ body {
 h3 {
     color: var(--cor3);
     font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    margin-bottom: 0.5rem;
+    font-weight: bold;
+    margin: 0.5rem;
 }
 
 #catalogo {
@@ -33,7 +32,6 @@ h3 {
     gap: 1.5rem;
     background-color: transparent;
     padding: 1rem 0;
-    border: none;
     flex-wrap: wrap;
     max-width: 1200px;
 }
@@ -44,12 +42,12 @@ h3 {
     background-color: var(--cor2);
     padding: 1.25rem;
     border: 1px solid var(--cor4);
-    border-radius: 8px;
+    border-radius: 5px;
     height: auto;
     width: 260px;
     color: var(--cor3);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: all 0.2s;
 }
 
 .card:hover {
